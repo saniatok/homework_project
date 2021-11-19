@@ -12,35 +12,26 @@ using namespace std;
 }
 
 template <typename T>
-void Run(string method_name, Algorithms<T> p, vector <T> data)
+void Run(string method_name, Algorithms<T> a, int data )
 {
     auto start = chrono::system_clock::now();
-    vector<T> res = p(data);
+    vector<int> result=a(data);
     auto stop = chrono::system_clock::now();
     auto time = chrono::duration_cast<chrono::microseconds>(stop - start).count();
-    cout << method_name << "\t"
-        << (is_sorted(res.begin(), res.end()) ? to_string(time) + "\tmcs" : "failed") << endl;
-}
-
-void ReadData(vector <int> data)
-{
-    string str;
-    int num;
-    ifstream file;
-    file.open("data.txt");
-    while (!file.eof()) {
-        getline(file, str);
-        for (int i : str)
-        {
-            num = stoi(str);
-            data.push_back(i);
-        }
-    }
-    file.close();
+    cout << endl << method_name << "\t"
+         << to_string(time) + "\tmcs" << endl
+        << "Простые множители числа: ";
+    for (vector<int>::const_iterator i = result.begin(); i != result.end(); ++i)
+            cout << *i << " " ;
+    cout << endl;
 }
 
 int main()
 {
-    vector <int> data;
-    ReadData(data);
+    setlocale(LC_ALL, "Russian");
+    int data;
+    cout << "Введите число для факторизации: ";
+    cin >> data;
+    RUN(p_method_Pollard);
+    return 0;
 }
