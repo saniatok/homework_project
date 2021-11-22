@@ -8,3 +8,4 @@ using Algorithms = vector<int>(*)(T data);
 
 vector<int> p_method_Pollard(int data);
 vector<int>FermatFactor(int data);
+vector<int> pethod_Leman(int data);
