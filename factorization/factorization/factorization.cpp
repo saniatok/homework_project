@@ -20,7 +20,7 @@ void Run(string method_name, Algorithms<T> a, int data )
     auto time = chrono::duration_cast<chrono::microseconds>(stop - start).count();
     cout << endl << method_name << "\t"
          << to_string(time) + "\tmcs" << endl
-        << "Простые множители числа: ";
+        << "Множители числа: ";
     for (vector<int>::const_iterator i = result.begin(); i != result.end(); ++i)
             cout << *i << " " ;
     cout << endl;
@@ -29,10 +29,18 @@ void Run(string method_name, Algorithms<T> a, int data )
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    int data;
-    cout << "Введите число для факторизации: ";
-    cin >> data;
-    RUN(p_method_Pollard);
-    RUN(FermatFactor);
+    while (1)
+    {
+        int data;
+        cout <<endl << "Введите число для факторизации или 0 для выхода: ";
+        cin >> data;
+        if (data != 0)
+        {
+            RUN(p_method_Pollard);
+            RUN(FermatFactor);
+        }
+        else
+            return 0;
+    }
     return 0;
 }

@@ -89,7 +89,7 @@ loop1:
 
 vector<int> p_method_Pollard(int data)
 {
-	int n = 8395;
+	int n = data;
 	vector <int> res;
 	int d;
 	int r;
