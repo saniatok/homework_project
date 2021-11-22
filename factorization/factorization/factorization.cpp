@@ -33,5 +33,6 @@ int main()
     cout << "Введите число для факторизации: ";
     cin >> data;
     RUN(p_method_Pollard);
+    RUN(FermatFactor);
     return 0;
 }
