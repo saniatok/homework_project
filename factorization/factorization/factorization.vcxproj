@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="factorization.cpp" />
+    <ClCompile Include="Method_Ferma.cpp" />
     <ClCompile Include="p_method_Pollard.cpp" />
   </ItemGroup>
   <ItemGroup>
