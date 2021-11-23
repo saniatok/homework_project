@@ -48,7 +48,7 @@ vector<int> fractionmethod(int& n) {
         }
         e = temp - (int)temp;
         if (i >= 1) {
-            for (int i = 2; i < (int)sqrt(n); ++i) {
+            for (int i = 2; i < n; ++i) {
                 if (n % i == 0) {
                     ans.push_back(i);
                     ans.push_back(n / i);
