@@ -39,6 +39,7 @@ int main()
             RUN(p_method_Pollard);
             RUN(FermatFactor);
             RUN(pethod_Leman);
+            RUN(fraction_method);
         }
         else
             return 0;
