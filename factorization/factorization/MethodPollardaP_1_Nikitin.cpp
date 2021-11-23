@@ -23,7 +23,7 @@ __int64 NOD(__int64 a, __int64 b) { //НОД по алгоритму Евкли�
 __int64 metodpollardap1(__int64 n) {//реализация метода Полларда p-1
     vector <__int64> prostch;
     __int64 B;
-    B = 20;
+    B = 10;
     for (unsigned int i = 2; i <= B; i++) {
         if (prostoe(i)) {
             prostch.push_back(i);
@@ -59,6 +59,9 @@ vector <__int64> Pollardans(__int64 n) {//создаем вектор прост
             mn.push_back(n);
             n = 1;
         }
+    }
+    if (p == 1) {
+        mn.push_back(-1);
     }
     return mn;
 }
