@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="factorization.cpp" />
     <ClCompile Include="fraction_method.cpp" />
+    <ClCompile Include="MethodPollardaP_1_Nikitin.cpp" />
     <ClCompile Include="Method_Ferma.cpp" />
     <ClCompile Include="Method_Leman.cpp" />
     <ClCompile Include="p_method_Pollard.cpp" />
