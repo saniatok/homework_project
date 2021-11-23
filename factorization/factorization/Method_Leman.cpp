@@ -29,7 +29,7 @@ bool square(unsigned long long a) {
 unsigned long long Step1(const unsigned long long n) {
 	int b;
 	b = n;
-	for (int a = 2; a<int(cbrt(n)); a++) {
+	for (int a = 2; a<=int(cbrt(n)); a++) {
 		if (n % a == 0) {
 			return a;
 		}
