@@ -24,7 +24,7 @@ long gcd(long a, long b) {//ищем НОД
     return a;
 }
 
-vector<int> fractionmethod(int n) {
+vector<int> fraction_method(int n) {
     double e = sqrt(n) - (int)sqrt(n);
     vector<int> b;
     vector<int> A;
