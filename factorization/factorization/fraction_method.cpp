@@ -74,14 +74,3 @@ vector<int> fractionmethod(int& n) {
         i++;
     }
 }
-
-int main()
-{
-    int n;
-    cin >> n;
-    vector <int> v = fractionmethod(n);
-    for (int i = 0; i < v.size(); ++i) {
-        cout << v[i] << endl;
-    }
-    return 0;
-}
