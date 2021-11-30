@@ -37,6 +37,7 @@ int main()
         if (data != 0)
         {
             RUN(p_method_Pollard);
+            RUN(metodpollardap1);
             RUN(FermatFactor);
             RUN(pethod_Leman);
             RUN(fraction_method);

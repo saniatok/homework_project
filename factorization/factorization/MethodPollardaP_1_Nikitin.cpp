@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-__int64 powmod(int a, int k, int n) // (a*k) % n
+int powmod(int a, int k, int n) // (a*k) % n
 {
     return (int(pow(a, k)) % n);
 }
@@ -61,7 +61,7 @@ vector <int> Pollardans(int n) {//создаем вектор простых м�
         }
     }
     if (p == 1) {
-        mn.push_back(-1);
+        mn[0] = -1;
     }
     return mn;
 }
