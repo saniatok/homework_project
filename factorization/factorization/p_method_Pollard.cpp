@@ -68,21 +68,29 @@ bool Test(unsigned int m) //функция проверки числа на простоту
 		s++;      
 		t=t/2;
 	} 
+
 	int r=0; 
-loop:
-	r++;  
-	if (r>50) goto loop1;
-	a=(rand()%(m-4))+2; 
-	x=StepMod(a,t,m); 
-	if ((x==1) || (x==(m-1)))  goto loop; 
-	for(int j=0;j<(s-1);j++) 
+	while (r < 50)
 	{
-		x=StepMod(x,2,m); 
-		if (x==1) return 0;  
-		if (x==(m-1)) goto loop; 
+		r++;
+		a = (rand() % (m - 4)) + 2;
+		x = StepMod(a, t, m);
+		if (!((x == 1) || (x == (m - 1))))
+		{
+			for (int j = 0; j < (s - 1); j++)
+			{
+				x = StepMod(x, 2, m);
+				if (x == 1)
+				{
+					return 0;
+				}
+				if (x == (m - 1))
+				{
+					break;
+				}
+			}
+		}
 	} 
-	return 0; 
-loop1: 
 	return 1; 
 }
 
